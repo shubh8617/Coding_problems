@@ -1,6 +1,6 @@
 
 
-
+//insert at front in linked list
 #include<bits/stdc++.h>
 using namespace std;
 class node{ //used for creating a node
