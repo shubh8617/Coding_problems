@@ -1,10 +1,7 @@
-
-
-
 #include<bits/stdc++.h>
 using namespace std;
 class node{ //used for creating a node
-	public:
+	public:                                       
 		int data; //store the contents
 		node* next; //for storing address, acts as a pointer
 	node(int d)
@@ -13,7 +10,7 @@ class node{ //used for creating a node
 		next=NULL; //null	
 	}
 };
-void insertfront(node* &head,node* &tail,int d)   
+void insertfront(node* &head,node* &tail,int d)     // to create node = new node(d)
 {
 	if(head==NULL)
 	{
@@ -25,7 +22,7 @@ void insertfront(node* &head,node* &tail,int d)
 	n->next=head;
 	head=n;
 }
-}
+}  //675
 void display(node* head)
 {
 	while(head)
@@ -39,7 +36,10 @@ int main()
 {
 	node* head=NULL; 
 	node* tail=NULL; 
-	for(int i=1;i<=5;i++)
+	int n; 
+	cout<<"No of elements you want to insert :- "<<" ";
+	 cin>>n;
+	for(int i=1;i<=n;i++)
 	{
 		int k;
 		cin>>k;
