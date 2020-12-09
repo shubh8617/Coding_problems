@@ -47,13 +47,9 @@ int main()
 	}
 	cout<<"Linked list after insertion is "<<endl;
 	display(head);
-	  node* curr;
-      int c=0;
-   
-   for(curr=head;curr!=NULL;curr=curr->next)
-       c++;
-       curr=head;
-     for(int i=0;i<c/2;i++)
-     curr=curr->next;
-     cout<<"Middle element of the linked list is:- "<< curr->data;
+	  node* curr=head;
+      head=head->next;
+      free(curr);
+      display(head);
+  
 }
