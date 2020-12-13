@@ -28,12 +28,11 @@ void insertback(node* &head,node* &tail,int d)
 }
 void display(node* head)
 {
-	if(head!=NULL)
+	while(head)
 	{
 		cout<<head->data<<"--->";
-		display(head->next);   //recursive calling
+		head=head->next;
 	}
-	else
 	cout<<"NULL"<<"\n";
 }
 int main()
@@ -51,5 +50,20 @@ int main()
 	}
 	cout<<"after inserting at back elements will be :- "<<endl;
 	display(head);
+
+	node *slow=head;
+	node *fast=head->next;
+  while(fast!=NULL&& slow!=NULL)
+	{
+		
+		slow->next=fast->next;
+		free(fast);
+		 slow= slow->next;  
+        if (slow != NULL)  
+            fast = slow->next;  
+		
+	}
+	
+		display(head);
 }
 
