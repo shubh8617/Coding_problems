@@ -1,5 +1,5 @@
 
-//naive solution
+//efficient solution change the links
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -50,16 +50,19 @@ int main()
 	}
 	cout<<"after inserting at back elements will be :- "<<endl;
 	display(head);
-     vector<int> arr;
-     for(node* curr=head;curr!=NULL;curr=curr->next)
-     {
-     	arr.push_back(curr->data);
-	 }
-	  for(node* curr=head;curr!=NULL;curr=curr->next)
-     {
-        curr->data=	arr.back();
-        arr.pop_back();
-	 }
-		cout<<"After Reverse Linked list"<<" "<<"\n";display(head);
+    node* curr=head;
+    node* prev=NULL;
+	node* next=NULL;
+
+    while(curr!=NULL)
+    {
+        next= curr->next;
+    	curr->next=prev;
+    	prev=curr;
+    	curr=next;
+	}
+	head=prev;
+			cout<<"After Reverse Linked list"<<" "<<"\n";display(head);
+
 }
 
