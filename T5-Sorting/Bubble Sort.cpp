@@ -1,6 +1,5 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h> 
 using namespace std;
-
 int main() {
 	
     vector<int> arr;
@@ -12,7 +11,7 @@ int main() {
 	 	cin>>a;
 	 	arr.push_back(a);
 	 }
-  for(int i=0;i<n-1;i++)
+  for(int i=0;i<n-1;i++)   //Bubble Sort in Ascending Order
   {
   	for(int j=0;j<n-i-1;j++)
   	{
@@ -24,7 +23,7 @@ int main() {
    for(int i=0;i<n;i++)
     cout<<arr[i]<<" ";	
     cout<<"\n";
-	 for(int i=0;i<n-1;i++)
+	 for(int i=0;i<n-1;i++)   //Bubble Sort in descending Order
      {
       	for(int j=0;j<n-i-1;j++)
      	{
@@ -37,3 +36,4 @@ int main() {
     cout<<arr[i]<<" ";	
 
 }
+
