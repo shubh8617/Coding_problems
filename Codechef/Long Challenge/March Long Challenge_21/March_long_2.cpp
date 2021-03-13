@@ -21,15 +21,15 @@ int main()
 			if(arr[i]>(i+1))
 			 {
 			 	f=1;
-			 	//	cout<<"Second"<<"\n";
+			 //	cout<<"Second"<<"\n";
 			 	break;
 			 }
 			 else
 			 {
-			 	c=c+(i-arr[i]);
+			 	c=c+(abs((i+1)-arr[i]));
 			 }
 		}
-		if((c%2==0)||f==1)
+		if((c%2==0 || f==1))
 			cout<<"Second"<<"\n";
 			else
 				cout<<"First"<<"\n";
