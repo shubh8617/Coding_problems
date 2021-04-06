@@ -4,22 +4,26 @@ using namespace std;
 const int CHAR=256;
 int leftMost(string &str) 
 {
-    int fIndex[CHAR]={0};
-    fill(fIndex,fIndex+CHAR,-1);
-    for(int i=0;i<256;i++)
-    cout<<fIndex[i]<<" ";
-    cout<<"\n";
+    int arr[CHAR]={0};
+    fill(arr,arr+CHAR,-1);
     int res=INT_MAX;
-    cout<<res;
     for(int i=0;i<str.length();i++){
-        int fi=fIndex[str[i]]; //0
-        if(fi==-1)  //false
-        fIndex[str[i]]=i;
-        else
-        res=min(res,fi); //min(1,0)
+    	int x=arr[str[i]];
+		if(x==-1)
+		{
+			arr[str[i]]=1;
+		}
+		else
+		{
+			arr[str[i]]=0;
+		}
     }
     
-    return (res==INT_MAX)?-1:res;//ternary operator
+    for(int i=0;i<str.length();i++){
+    	if(arr[str[i]]==1)
+    	return i;
+    }
+    return -1;
 }
  
 int main() 
