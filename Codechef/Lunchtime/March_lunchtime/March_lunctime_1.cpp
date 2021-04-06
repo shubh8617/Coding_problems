@@ -1,15 +1,20 @@
-#define ll long long
 #include<bits/stdc++.h>
 using namespace std;
-
-int main()
+#define int long long int
+signed main()
 {
-	ll t;
+	int t;
 	cin>>t;
 	while(t--)
 	{
-		ll a,y,x;
+		int a,y,x;
 		cin>>a>>y>>x;
-		cout<<(y*x)<<"\n";
+		if(a<y)
+		cout<<x<<"\n";
+		else
+		{
+			int ans=y*x;
+		cout<<ans<<"\n";
 	}
+}
 }
