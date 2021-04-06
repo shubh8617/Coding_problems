@@ -9,7 +9,7 @@ int main()
 	{
 		ll n;
 		cin>>n;
-		ll k = (n-1)*14;
+		ll k = (n-1)*18;
 		cout<<(k+20)<<endl;
 	}
 }
