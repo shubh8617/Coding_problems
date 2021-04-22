@@ -34,7 +34,6 @@ public:
 		q1 = q2; 
 		q2 = q; 
 	} 
-
 	void pop() 
 	{ 
 
@@ -44,21 +43,17 @@ public:
 		q1.pop(); 
 		curr_size--; 
 	} 
-
 	int top() 
 	{ 
 		if (q1.empty()) 
 			return -1; 
 		return q1.front(); 
 	} 
-
 	int size() 
 	{ 
 		return curr_size; 
 	} 
 }; 
-
- 
 int main() 
 { 
 	Stack s; 
